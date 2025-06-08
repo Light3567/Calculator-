@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator with Secret Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+    }
+
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    #display {
+      width: 100%;
+      padding: 10px;
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+
+    .buttons button {
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 10px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
+<style type="text/css" id="dcoder_stylesheet"><!Doctye html>
+<html> lang "en">
+<head>
+<meta charset="utf-8">.
+<meta name="viewport" content="width"=device width
+<title>Facebook login </title></style></head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
+    <div class="buttons">
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button onclick="append('+')">+</button><br>
+
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button onclick="append('-')">-</button><br>
+
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button onclick="append('*')">*</button><br>
+
+      <button onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="append('/')">/</button><br>
+
+      <button onclick="clearDisplay()">C</button>
+    </div>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function append(char) {
+      document.getElementById('display').value += char;
+    }
+
+    function clearDisplay() {
+      document.getElementById('display').value = '';
+      document.getElementById('result').textContent = '';
+    }
+
+    function calculate() {
+      const expression = document.getElementById('display').value;
+      let result;
+
+      // Check if exactly "9+1" or "1+9"
+      if (expression === '9+1' || expression === '1+9') {
+        result = 'I miss you baby so much :/)(())';
+      } else {
+        try {
+          result = eval(expression);
+        } catch (e) {
+          result = 'Invalid Expression';
+        }
+      }
+
+      document.getElementById('result').textContent = result;
+    }
+  </script>
+
+<script type="text/javascript" id="dcoder_script"><style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://static.xx.fbcdn.net/rsrc.php/v3/yo/r/8kH2KfT3VTx.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-box {
+      background: white;
+      max-width: 320px;
+      padding: 30px;
+      margin: 100px auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      color: #1877f2;
+      margin-bottom: 20px;
+    }</script></body></html>
